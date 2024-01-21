@@ -1,0 +1,14 @@
+# Ignore all files
+*
+
+# Include specific folders
+!.gitignore
+!i3/
+!i3status/
+!rofi/
+!tmux/
+!nvim/
+!kitty/
+!picom/
+!polybar/
+
