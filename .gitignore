@@ -3,7 +3,7 @@
 
 # Include specific folders
 !.gitignore
-!i3/
+!i3/*
 !i3status/
 !rofi/
 !tmux/
