@@ -4,6 +4,8 @@
 # Include specific folders
 !.gitignore
 !i3status/
+#/i3/*
+!/i3/**
 !rofi/
 !tmux/
 !nvim/
