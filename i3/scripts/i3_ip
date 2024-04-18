@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
+##
+## Script to display current public IP address on Archcraft.
+
+# Icons
+iDIR='/usr/share/archcraft/icons/dunst'
+
+# Get public IP address
+get_ip() {
+    ip=$(curl -s 'https://api.ipify.org?format=json' | grep -oP '(?<="ip":")[^"]*')
+    echo "IP: $ip"
+}
+
+# Get icon
+get_icon() {
+    icon="$iDIR/network.png"
+}
+
+# Notify 
+notify_ip() {
+    get_icon && dunstify -u low -h string:x-dunst-stack-tag:obip -i "$icon" "$(get_ip)"
+}
+
+# Execute
+notify_ip
