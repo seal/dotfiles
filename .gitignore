@@ -1,14 +1,19 @@
-# Ignore all files
+# Ignore all files by default
 *
 
-# Include specific folders
+# Include specific folders and their contents
 !.gitignore
+!i3status/
 !i3status/**
 !i3/
-!/i3/**
+!i3/**
 !rofi/
+!rofi/**
+!tmux/
 !tmux/**
 !nvim/
+!nvim/**
 !kitty/
+!kitty/**
 !picom/
-
+!picom/**
