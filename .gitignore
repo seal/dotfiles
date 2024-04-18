@@ -7,7 +7,7 @@
 !i3/
 !/i3/**
 !rofi/
-!tmux
+!tmux/**
 !nvim/
 !kitty/
 !picom/
