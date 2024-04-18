@@ -2,6 +2,7 @@
 *
 
 # Include specific folders and their contents
+!.zshrc
 !.gitignore
 !i3status/
 !i3status/**
