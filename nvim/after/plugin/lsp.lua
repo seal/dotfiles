@@ -20,12 +20,26 @@ require('mason-lspconfig').setup({
     -- Replace the language servers listed here
     -- with the ones you want to install
     --ensure_installed = { 'gopls', 'rust_analyzer', 'tsserver' },
-    ensure_installed = { 'tsserver',"denols",  'gopls', 'rust_analyzer' },
+    ensure_installed = { 'tsserver',"denols",  'gopls', 'rust_analyzer'},
     handlers = {
         lsp.default_setup,
     }
 })
 
+local system_name = vim.loop.os_uname().sysname
+if system_name == "Linux" then
+  -- Check if the Linux distribution is NixOS
+  local file = io.open("/etc/os-release", "r")
+  if file then
+    local content = file:read("*all")
+    file:close()
+    if string.find(content, "ID=nixos") then
+      require'lspconfig'.clangd.setup{
+        cmd = { "/run/current-system/sw/bin/clangd" },
+      }
+    end
+  end
+end
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
