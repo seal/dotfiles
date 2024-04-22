@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+export PATH="$HOME/go/bin:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
 alias gh="cd /home/will/go/src/github.com/seal"
 
