@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export PATH="$HOME/go/bin:$PATH"
+eval "$(direnv hook zsh)"
 export ZSH="$HOME/.oh-my-zsh"
 alias gh="cd /home/will/go/src/github.com/seal"
 
@@ -72,7 +73,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(direnv git)
 
 source $ZSH/oh-my-zsh.sh
 
