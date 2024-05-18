@@ -3,6 +3,7 @@
 
 # Include specific folders and their contents
 !.zshrc
+!.p10k.zsh
 !.gitignore
 !i3status/
 !i3status/**
