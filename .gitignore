@@ -21,3 +21,5 @@
 !picom/
 !picom/**
 !dns.sh
+!hypr/
+!hypr/**
