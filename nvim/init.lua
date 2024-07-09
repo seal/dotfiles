@@ -40,6 +40,7 @@ use { 'alexghergh/nvim-tmux-navigation', config = function()
 }
 use { "catppuccin/nvim", as = "catppuccin" }
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  use ('MunifTanjim/prettier.nvim')
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
@@ -51,9 +52,7 @@ use { "catppuccin/nvim", as = "catppuccin" }
     {'williamboman/mason.nvim'},
     {'williamboman/mason-lspconfig.nvim'},
 
-    -- LSP Support
     {'neovim/nvim-lspconfig'},
-    -- Autocompletion
     {'hrsh7th/nvim-cmp'},
     {'hrsh7th/cmp-nvim-lsp'},
     {'L3MON4D3/LuaSnip'},

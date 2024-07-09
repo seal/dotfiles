@@ -39,7 +39,6 @@ undotree:
 ({"n", "v"}, "<leader>y", [["+y]]) // clipboard yank
 ("n", "<leader>Y", [["+Y]])       //Clipboard + vim clipboard yank ? 
 ({"n", "v"}, "<leader>d", [["_d]])
-("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 ("n", "<leader>f", vim.lsp.buf.format) // format
 ("n", "<C-k>", "<cmd>cnext<CR>zz") // possible jump to next error ? 
 ("n", "<C-j>", "<cmd>cprev<CR>zz") // ditto

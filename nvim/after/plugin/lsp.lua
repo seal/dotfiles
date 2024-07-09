@@ -1,4 +1,4 @@
-require("mason").setup{
+require("mason").setup {
     PATH = "append",
 }
 local lsp = require("lsp-zero")
@@ -22,24 +22,23 @@ require('mason').setup({})
 local system_name = vim.loop.os_uname().sysname
 local is_nixos = false
 if system_name == "Linux" then
-  local file = io.open("/etc/os-release", "r")
-  if file then
-    local content = file:read("*all")
-    file:close()
-    if string.find(content, "ID=nixos") then
-      is_nixos = true
+    local file = io.open("/etc/os-release", "r")
+    if file then
+        local content = file:read("*all")
+        file:close()
+        if string.find(content, "ID=nixos") then
+            is_nixos = true
+        end
     end
 end
-end
 
--- local ensure_installed = { 'tsserver', 'denols', 'gopls' }
-local ensure_installed = { 'tsserver', 'denols', 'gopls' , 'volar'}
+local ensure_installed = { 'tsserver', 'denols', 'gopls', 'volar' }
 if not is_nixos then
-  table.insert(ensure_installed, 'clangd')
-  table.insert(ensure_installed, 'rust_analyzer')
-  table.insert(ensure_installed, 'pyright')
-  table.insert(ensure_installed, 'lua-ls')
-  table.insert(ensure_installed, 'hls')
+    table.insert(ensure_installed, 'clangd')
+    table.insert(ensure_installed, 'rust_analyzer')
+    table.insert(ensure_installed, 'pyright')
+    table.insert(ensure_installed, 'lua-ls')
+    table.insert(ensure_installed, 'hls')
 end
 
 require('mason-lspconfig').setup({
@@ -49,39 +48,47 @@ require('mason-lspconfig').setup({
     }
 })
 if is_nixos then
-  require'lspconfig'.clangd.setup{
-    cmd = { "/run/current-system/sw/bin/clangd" },
-  }
-  require'lspconfig'.pyright.setup{}
-  require'lspconfig'.rust_analyzer.setup {
-    on_attach = function(client, bufnr)
-        lsp.default_setup(client, bufnr)
-        lsp_format_on_save(bufnr)
-    end
-  }
-  require'lspconfig'.lua_ls.setup{}
-  require'lspconfig'.hls.setup{}
-
-
+    require 'lspconfig'.clangd.setup {
+        cmd = { "/run/current-system/sw/bin/clangd" },
+    }
+    require 'lspconfig'.pyright.setup {}
+    require 'lspconfig'.rust_analyzer.setup {
+        on_attach = function(client, bufnr)
+            lsp.default_setup(client, bufnr)
+            lsp_format_on_save(bufnr)
+        end
+    }
+    require 'lspconfig'.lua_ls.setup {
+        settings = {
+            Lua = {
+                diagnostics = {
+                    globals = {
+                        'vim',
+                    },
+                },
+            },
+        },
+    }
+    require 'lspconfig'.hls.setup {}
 end
 local prettier = require("prettier")
 
 prettier.setup({
-  bin = 'prettier', -- or `'prettierd'` (v0.23.3+)
-  filetypes = {
-    "css",
-    "graphql",
-    "html",
-    "javascript",
-    "javascriptreact",
-    "json",
-    "less",
-    "markdown",
-    "scss",
-    "typescript",
-    "typescriptreact",
-    "yaml",
-  },
+    bin = 'prettier', -- or `'prettierd'` (v0.23.3+)
+    filetypes = {
+        "css",
+        "graphql",
+        "html",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "less",
+        "markdown",
+        "scss",
+        "typescript",
+        "typescriptreact",
+        "yaml",
+    },
 })
 
 local cmp = require('cmp')
