@@ -70,6 +70,13 @@ if is_nixos then
         },
     }
     require 'lspconfig'.hls.setup {}
+    require('lspconfig').gopls.setup({
+        settings = {
+            gopls = {
+                gofumpt = true
+            }
+        }
+    })
 end
 local prettier = require("prettier")
 

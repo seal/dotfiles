@@ -150,6 +150,11 @@ _G.packer_plugins = {
     path = "/home/will/.local/share/nvim/site/pack/packer/start/prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
+  ["supermaven-nvim"] = {
+    loaded = true,
+    path = "/home/will/.local/share/nvim/site/pack/packer/start/supermaven-nvim",
+    url = "https://github.com/supermaven-inc/supermaven-nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/will/.local/share/nvim/site/pack/packer/start/telescope.nvim",
