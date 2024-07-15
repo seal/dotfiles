@@ -1,27 +1,24 @@
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-##
-## Colors configuration ---------------------------------------
 
 [colors.primary]
-background = "#20262C"
-foreground = "#f1fcf9"
+background = "#1e1e2e"  # Extracted from rgba(30, 30, 46, 0.6)
+foreground = "#b4befe"  # Extracted from rgb(180, 190, 254)
 
 [colors.normal]
-black   = "#20262c"
-red     = "#db86ba"
-green   = "#74dd91"
-yellow  = "#e49186"
-blue    = "#75dbe1"
-magenta = "#b4a1db"
-cyan    = "#9ee9ea"
-white   = "#f1fcf9"
+black   = "#1e1e2e"  # Same as background
+red     = "#f38ba8"  # Extracted from #F38BA8
+green   = "#a6e3a1"  # Extracted from #a6e3a1
+yellow  = "#f9e2af"  # Extracted from #f9e2af
+blue    = "#89b4fa"  # Extracted from #89B4FA
+magenta = "#cba6f7"  # Extracted from #cba6f7
+cyan    = "#94e2d5"  # Extracted from #94e2d5
+white   = "#b4befe"  # Same as foreground
 
 [colors.bright]
-black   = "#465463"
-red     = "#d04e9d"
-green   = "#4bc66d"
-yellow  = "#db695b"
-blue    = "#3dbac2"
-magenta = "#825ece"
-cyan    = "#62cdcd"
-white   = "#e0e5e5"
+black   = "#313244"  # Slightly lighter than background
+red     = "#f38ba8"  # Same as normal.red
+green   = "#a6e3a1"  # Same as normal.green
+yellow  = "#fab387"  # Extracted from #fab387
+blue    = "#89b4fa"  # Same as normal.blue
+magenta = "#cba6f7"  # Same as normal.magenta
+cyan    = "#94e2d5"  # Same as normal.cyan
+white   = "#f5c2e7"  # Extracted from rgb(245, 194, 231)

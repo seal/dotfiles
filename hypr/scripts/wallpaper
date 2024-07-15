@@ -4,6 +4,6 @@
 ##
 ## Set Wallpaper in Hyprland
 
-WALLPAPER="$HOME/.config/hypr/wallpapers/wallpaper.jpg"
-
-swaybg --output '*' --mode fill --image "$WALLPAPER"
+WALLPAPER="$HOME/.config/hypr/wallpapers/programmer.gif"
+swww-daemon & 
+swww img $WALLPAPER

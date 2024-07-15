@@ -11,6 +11,7 @@ import = ["~/.config/hypr/alacritty/colors.toml", "~/.config/hypr/alacritty/font
 ## You can set shell.program to the path of your favorite shell, e.g. /bin/zsh.
 ## Entries in shell.args are passed as arguments to the shell.
 #shell = { program = "/bin/zsh", args = ["--login"] }
+shell = { program = "/run/current-system/sw/bin/zsh" }
 
 ## Directory the shell is started in. When this is unset, or "None",
 ## the working directory of the parent process will be used.
@@ -35,7 +36,7 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 position = "None"
 dynamic_padding = true
 decorations = "full"
-opacity = 1.0
+opacity = 0.9
 blur = false
 startup_mode = "Windowed"
 dynamic_title = true
@@ -58,10 +59,10 @@ history = 10000
 multiplier = 3
 
 ## BELL -----------------------------------------------------------
-[bell]
-animation = "Linear"
-duration = 20
-command = { program = "paplay", args = ["/usr/share/sounds/freedesktop/stereo/dialog-error.oga"] }
+#[bell]
+#animation = "Linear"
+#duration = 20
+#command = { program = "paplay", args = ["/usr/share/sounds/freedesktop/stereo/dialog-error.oga"] }
 
 ## SELECTION ------------------------------------------------------
 [selection]

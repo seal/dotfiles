@@ -4,25 +4,24 @@
 # Default Theme
 # ------------------------------------------------------------------------------
 
-# Colors
-background='#20262C'
-foreground='#f1fcf9'
-color0='#20262c'
-color1='#db86ba'
-color2='#74dd91'
-color3='#e49186'
-color4='#75dbe1'
-color5='#b4a1db'
-color6='#9ee9ea'
-color7='#f1fcf9'
-color8='#465463'
-color9='#d04e9d'
-color10='#4bc66d'
-color11='#db695b'
-color12='#3dbac2'
-color13='#825ece'
-color14='#62cdcd'
-color15='#e0e5e5'
+background='#1e1e2e99'
+foreground='#b4befe'
+color0='#1e1e2e'
+color1='#f38ba8'
+color2='#a6e3a1'
+color3='#f9e2af'
+color4='#89b4fa'
+color5='#cba6f7'
+color6='#94e2d5'
+color7='#b4befe'
+color8='#313244'
+color9='#f38ba8'
+color10='#a6e3a1'
+color11='#f9e2af'
+color12='#89b4fa'
+color13='#cba6f7'
+color14='#94e2d5'
+color15='#b4befe'
 
 # Wallpaper
 wallpaper="$HOME/.config/hypr/wallpapers/wallpaper.jpg"

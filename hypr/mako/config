@@ -40,6 +40,8 @@ text-color=#f1fcf9
 border-color=#2a323b
 progress-color=over #b4a1db
 
+default-timeout=5000
+
 [urgency=low]
 border-color=#2a323b
 default-timeout=2000
