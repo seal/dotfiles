@@ -4,8 +4,8 @@
 ##
 ## Simple Script To Pick Color Quickly.
 
-#color=$(grim -g "`slurp -b 00000000 -p`" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n1 | cut -d' ' -f4)
-color=`$HOME/.config/hypr/scripts/hyprpicker`
+color=$(grim -g "`slurp -b 00000000 -p`" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n1 | cut -d' ' -f4)
+#color=`$HOME/.config/hypr/scripts/hyprpicker`
 image=/tmp/${color}.png
 
 main() {
@@ -13,7 +13,7 @@ main() {
 		# copy color code to clipboard
 		echo $color | tr -d "\n" | wl-copy
 		# generate preview
-		convert -size 48x48 xc:"$color" ${image}
+		magick convert -size 48x48 xc:"$color" ${image}
 		# notify about it
 		notify-send -h string:x-canonical-private-synchronous:sys-notify-picker -u low -i ${image} "$color, copied to clipboard."
 	fi

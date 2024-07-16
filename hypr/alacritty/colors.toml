@@ -1,6 +1,6 @@
 
 [colors.primary]
-background = "#1e1e2e"  # Extracted from rgba(30, 30, 46, 0.6)
+background = "#07122E"  # Color picker
 foreground = "#b4befe"  # Extracted from rgb(180, 190, 254)
 
 [colors.normal]

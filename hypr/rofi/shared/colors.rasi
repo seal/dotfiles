@@ -5,8 +5,8 @@ window {
     opacity: 0.8;
 }
 * {
-    background:     #15161EFF;
-    background-alt: #1A1B26FF;
+    background:     #07122E;
+    background-alt: #002B62;
     foreground:     #C0CAF5FF;
     selected:       #33467CFF;
     active:         #414868FF;
